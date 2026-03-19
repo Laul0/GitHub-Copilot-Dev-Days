@@ -1,249 +1,29 @@
 ---
-marp: true
 theme: default
-class: invert
+title: GitHub Copilot Dev Days · Montréal · 19 mars 2026
+highlighter: prism
+lineNumbers: false
+drawings:
+  persist: false
+colorSchema: dark
+transition: none
 paginate: true
-footer: "GitHub Copilot Dev Days · Montréal · 19 mars 2026"
-style: |
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
-  :root {
-    --gh-bg:      #0d1117;
-    --gh-bg2:     #161b22;
-    --gh-border:  #30363d;
-    --gh-blue:    #2f81f7;
-    --gh-blue-lt: #58a6ff;
-    --gh-blue-xt: #79c0ff;
-    --gh-green:   #3fb950;
-    --gh-orange:  #f0883e;
-    --gh-red:     #f85149;
-    --gh-yellow:  #d29922;
-    --gh-text:    #e6edf3;
-    --gh-muted:   #8b949e;
-    --gh-subtle:  #c9d1d9;
-  }
-
-  section {
-    background-color: var(--gh-bg);
-    color: var(--gh-text);
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    font-size: 20px;
-    line-height: 1.55;
-    padding: 36px 56px;
-  }
-
-  section h1 {
-    color: var(--gh-blue-xt);
-    font-size: 1.75em;
-    font-weight: 700;
-    border-bottom: 2px solid var(--gh-blue);
-    padding-bottom: 0.15em;
-    margin-bottom: 0.5em;
-    line-height: 1.2;
-  }
-
-  section h2 {
-    color: var(--gh-blue-lt);
-    font-size: 1.2em;
-    font-weight: 600;
-    margin: 0.2em 0 0.3em;
-  }
-
-  section h3 {
-    color: var(--gh-blue);
-    font-size: 1em;
-    font-weight: 600;
-  }
-
-  section p, section li {
-    color: var(--gh-subtle);
-    font-size: 0.92em;
-  }
-
-  section strong { color: var(--gh-green); font-weight: 600; }
-  section em     { color: var(--gh-orange); font-style: normal; font-weight: 500; }
-
-  section ul, section ol { padding-left: 1.4em; }
-  section li { margin: 0.3em 0; }
-  section ul > li::marker { color: var(--gh-blue); }
-
-  section code {
-    background-color: var(--gh-bg2);
-    color: var(--gh-text);
-    border: 1px solid var(--gh-border);
-    border-radius: 4px;
-    padding: 0.08em 0.42em;
-    font-family: 'Cascadia Code', 'JetBrains Mono', 'Fira Code', monospace;
-    font-size: 0.8em;
-  }
-
-  section pre {
-    background-color: var(--gh-bg2);
-    border: 1px solid var(--gh-border);
-    border-radius: 8px;
-    padding: 0.85em 1.1em;
-    margin: 0.7em 0;
-  }
-
-  section pre code {
-    border: none; background: none; padding: 0;
-    font-size: 0.78em; line-height: 1.5;
-  }
-
-  section blockquote {
-    border-left: 4px solid var(--gh-blue);
-    background-color: var(--gh-bg2);
-    padding: 0.4em 0.9em;
-    border-radius: 0 6px 6px 0;
-    margin: 0.8em 0;
-    font-style: italic;
-  }
-
-  section blockquote p { color: var(--gh-muted); margin: 0; }
-  section blockquote strong { color: var(--gh-blue-lt); }
-
-  section table { width: 100%; border-collapse: collapse; font-size: 0.85em; margin: 0.7em 0; }
-  section th {
-    background-color: var(--gh-bg2);
-    color: var(--gh-blue-xt);
-    padding: 0.45em 0.9em;
-    text-align: left;
-    border-bottom: 2px solid var(--gh-blue);
-    font-weight: 600;
-  }
-  section td {
-    padding: 0.4em 0.9em;
-    border-bottom: 1px solid #21262d;
-    color: var(--gh-subtle);
-    vertical-align: top;
-  }
-
-  section a { color: var(--gh-blue-lt); text-decoration: none; }
-
-  section::after { color: var(--gh-muted); font-size: 0.55em; }
-
-  footer { color: var(--gh-muted) !important; font-size: 0.52em !important; }
-
-  /* --- Layouts --- */
-  section.cover {
-    background: linear-gradient(140deg, #0d1117 0%, #0a1628 100%);
-    justify-content: center;
-    padding: 64px 80px;
-  }
-  section.cover h1 {
-    font-size: 2.5em; border: none; color: #fff;
-    margin-bottom: 0.05em; line-height: 1.1;
-  }
-  section.cover h2 { color: var(--gh-blue-lt); font-size: 1.3em; font-weight: 400; margin-top: 0.1em; }
-  section.cover p  { color: var(--gh-muted); margin-top: 2em; font-size: 0.82em; }
-
-  section.break {
-    background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  section.break h1 {
-    font-size: 2.8em; border: none; color: #fff;
-    margin-bottom: 0.08em;
-  }
-  section.break h2 { color: var(--gh-blue-lt); font-size: 1.4em; font-weight: 400; margin-top: 0; }
-  section.break p  { color: var(--gh-muted); font-size: 0.9em; margin-top: 0.4em; }
-
-  section.end {
-    background: linear-gradient(140deg, #0d1117 0%, #0a1628 100%);
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  section.end h1 { font-size: 2.6em; border: none; color: #fff; }
-  section.end h2 { color: var(--gh-blue-lt); font-size: 1.2em; font-weight: 400; }
-  section.end p  { color: var(--gh-muted); font-size: 0.85em; }
-  section.end a  { color: var(--gh-blue-xt); }
-
-  /* --- Grille de cartes --- */
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    margin: 1em 0;
-  }
-  .cards.cols-2 { grid-template-columns: repeat(2, 1fr); }
-  .card {
-    background: var(--gh-bg2);
-    border: 1px solid var(--gh-border);
-    border-radius: 8px;
-    padding: 0.85em;
-    font-size: 0.82em;
-    text-align: center;
-    color: var(--gh-subtle);
-  }
-  .card.blue   { border-color: var(--gh-blue); }
-  .card.green  { border-color: var(--gh-green); }
-  .card.orange { border-color: var(--gh-orange); }
-  .card.red    { border-color: var(--gh-red); }
-  .card.yellow { border-color: var(--gh-yellow); }
-  .card strong { color: var(--gh-text); display: block; margin-bottom: 0.2em; }
-  .card small  { color: var(--gh-muted); display: block; font-size: 0.85em; }
-
-  /* --- Pill badges --- */
-  .badge {
-    display: inline-block;
-    background: var(--gh-bg2);
-    border: 1px solid var(--gh-blue);
-    border-radius: 20px;
-    padding: 0.15em 0.7em;
-    font-size: 0.75em;
-    color: var(--gh-blue-lt);
-    margin: 0 0.2em;
-  }
-
-  /* --- Bingo grid --- */
-  .bingo {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
-    max-width: 660px;
-    margin: 0.8em auto;
-    font-size: 0.78em;
-  }
-  .bingo .cell {
-    background: var(--gh-bg2);
-    border: 1px solid var(--gh-border);
-    border-radius: 8px;
-    padding: 0.7em 0.5em;
-    text-align: center;
-    min-height: 60px;
-    display: flex; flex-direction: column; justify-content: center;
-    color: var(--gh-subtle);
-    line-height: 1.3;
-  }
-  .bingo .cell.hl  { border-color: var(--gh-blue); }
-  .bingo .cell.center {
-    border: 2px solid var(--gh-green);
-    color: var(--gh-green);
-    font-weight: 700;
-    font-size: 1.1em;
-  }
-
+layout: image-right
+image: /assets/github-copilot-dev-days.png
+backgroundSize: contain
+class: cover-slide
+fonts:
+  sans: Inter
+  mono: Cascadia Code
 ---
 
-<!-- _class: cover -->
-<!-- _paginate: false -->
-<!-- _footer: "" -->
-
-![bg right:40% fit](../assets/github-copilot-dev-days.png)
-
-# 🍁 GitHub Copilot Dev Days | Montréal
+# <span class="maple-leaf">🍁</span> GitHub Copilot Dev Days | Montréal
 
 ## 19 mars 2026
 
 9h00 – 12h00 · Session entièrement en **français**
 
 ---
-
-<!-- _paginate: false -->
-<!-- _footer: "" -->
 
 # 📋 Programme de la matinée
 
@@ -262,20 +42,26 @@ style: |
 > **Prérequis** : Compte GitHub + Copilot activé → `aka.ms/get-github-copilot-devdays`
 
 ---
+clicks: 6
+---
+
+<!-- Slide 3 — animation: each Next highlights the next card blue -->
 
 # 🎯 Qui êtes-vous ?
 
 *Levez la main quand votre rôle apparaît — les exemples de ce matin sont pour vous.*
 
 <div class="cards">
-  <div class="card blue">👩‍💻 <strong>Développeur·euse</strong><small>Code, tests, refactoring</small></div>
-  <div class="card">🏗️ <strong>Architecte</strong><small>Design, revue, docs</small></div>
-  <div class="card">📋 <strong>Chef de projet</strong><small>Stories, impact, specs</small></div>
-  <div class="card">⚙️ <strong>DevOps / SRE</strong><small>Pipelines, scripts, logs</small></div>
-  <div class="card">🎓 <strong>Étudiant·e</strong><small>Apprentissage accéléré</small></div>
-  <div class="card">🔍 <strong>Curieux·euse</strong><small>Explorer sans contrainte</small></div>
+  <div :class="['card', $clicks >= 1 && $clicks < 2 ? 'blue' : '']">👩‍💻 <strong>Développeur·euse</strong><small>Code, tests, refactoring</small></div>
+  <div :class="['card', $clicks >= 2 && $clicks < 3 ? 'blue' : '']">🏗️ <strong>Architecte</strong><small>Design, revue, docs</small></div>
+  <div :class="['card', $clicks >= 3 && $clicks < 4 ? 'blue' : '']">📋 <strong>Chef de projet</strong><small>Stories, impact, specs</small></div>
+  <div :class="['card', $clicks >= 4 && $clicks < 5 ? 'blue' : '']">⚙️ <strong>DevOps / SRE</strong><small>Pipelines, scripts, logs</small></div>
+  <div :class="['card', $clicks >= 5 && $clicks < 6 ? 'blue' : '']">🎓 <strong>Étudiant·e</strong><small>Apprentissage accéléré</small></div>
+  <div :class="['card', $clicks >= 6 ? 'blue' : '']">🔍 <strong>Curieux·euse</strong><small>Explorer sans contrainte</small></div>
 </div>
 
+---
+clicks: 8
 ---
 
 # 🎲 Bingo des Devs
@@ -283,20 +69,21 @@ style: |
 *Cochez si c'est votre cas. Qui fera un bingo d'ici 12h ?* 🏆
 
 <div class="bingo">
-  <div class="cell hl">✅ VS Code<br/>au quotidien</div>
-  <div class="cell">😅 10+ onglets<br/>ouverts maintenant</div>
-  <div class="cell">😰 Peur que l'IA<br/>me remplace</div>
-  <div class="cell">🤖 Utilisé Copilot<br/>en production</div>
-  <div class="cell center">🍁<br/>MONTRÉAL<br/>LIBRE</div>
-  <div class="cell">📦 Un side project<br/>jamais terminé</div>
-  <div class="cell">🌙 Codé à<br/>2h du matin</div>
-  <div class="cell">🐛 Débogué 2h+<br/>un truc trivial</div>
-  <div class="cell">🚀 Déployé un<br/>vendredi soir</div>
+  <div :class="['cell', $clicks >= 1 && $clicks < 2 ? 'hl' : '']">✅ VS Code<br/>au quotidien</div>
+  <div :class="['cell', $clicks >= 2 && $clicks < 3 ? 'hl' : '']">😅 10+ onglets<br/>ouverts maintenant</div>
+  <div :class="['cell', $clicks >= 3 && $clicks < 4 ? 'hl' : '']">😰 Peur que l'IA<br/>me remplace</div>
+  <div :class="['cell', $clicks >= 4 && $clicks < 5 ? 'hl' : '']">🤖 Utilisé Copilot<br/>en production</div>
+  <div class="cell center"><span class="maple-leaf">🍁</span><br/>MONTRÉAL<br/>LIBRE</div>
+  <div :class="['cell', $clicks >= 5 && $clicks < 6 ? 'hl' : '']">📦 Un side project<br/>jamais terminé</div>
+  <div :class="['cell', $clicks >= 6 && $clicks < 7 ? 'hl' : '']">🌙 Codé à<br/>2h du matin</div>
+  <div :class="['cell', $clicks >= 7 && $clicks < 8 ? 'hl' : '']">🐛 Débogué 2h+<br/>un truc trivial</div>
+  <div :class="['cell', $clicks >= 8 ? 'hl' : '']">🚀 Déployé un<br/>vendredi soir</div>
 </div>
 
 ---
-
-<!-- _class: break -->
+layout: default
+class: section-break
+---
 
 # Session 1
 
@@ -379,8 +166,9 @@ style: |
 > → *Choisissez votre point d'entrée selon votre rôle*
 
 ---
-
-<!-- _class: break -->
+layout: default
+class: section-break
+---
 
 # Workshop 1
 
@@ -389,11 +177,11 @@ style: |
 *L'entrée universelle — sans IDE, depuis n'importe quel terminal*
 
 ---
-
-<!-- _paginate: false -->
-<!-- _footer: "" -->
-
-![bg right:38% fit](../assets/github-copilot-dev-days.png)
+layout: image-right
+image: /assets/github-copilot-dev-days.png
+backgroundSize: contain
+class: cover-slide
+---
 
 # Workshop 1 — GitHub Copilot CLI
 
@@ -590,8 +378,9 @@ gh copilot ask "Fix auth bug"  |  gh copilot ask "Add payment tests"
 → `copilot-dev-days.github.io`
 
 ---
-
-<!-- _class: break -->
+layout: default
+class: section-break
+---
 
 # Session 3
 
@@ -714,8 +503,9 @@ d'échec pour chaque endpoint.
 → Tous les labs : **`copilot-dev-days.github.io`**
 
 ---
-
-<!-- _class: break -->
+layout: default
+class: section-break
+---
 
 # Session 4
 
@@ -803,8 +593,9 @@ compte si je l'ai oublié.
 *Lab : `github.com/skills/expand-your-team-with-copilot`*
 
 ---
-
-<!-- _class: break -->
+layout: default
+class: section-break
+---
 
 # Workshop 2
 
@@ -930,8 +721,9 @@ Valeur     → Combien d'heures récupérées/semaine ?
 > *Lab complet : `copilot-dev-days.github.io` → Agentic Workflows*
 
 ---
-
-<!-- _class: break -->
+layout: default
+class: section-break
+---
 
 # 🎙️ Table Ronde
 
@@ -954,6 +746,7 @@ Valeur     → Combien d'heures récupérées/semaine ?
 4. *Si vous deviez convaincre votre manager en 30 secondes, quel argument utiliseriez-vous ?*
 
 ---
+
 **Note d'animation :** Ne pas chercher les bonnes réponses — favoriser les frictions, les scepticismes, les vraies questions. *C'est là que la conversation devient mémorable.*
 
 ---
@@ -973,8 +766,9 @@ Valeur     → Combien d'heures récupérées/semaine ?
 > *De l'issue à la PR — sans que vous ayez touché un seul fichier.*
 
 ---
-
-<!-- _class: break -->
+layout: default
+class: section-break
+---
 
 # Conclusion
 
@@ -1043,12 +837,11 @@ Valeur     → Combien d'heures récupérées/semaine ?
 > *Le deuxième meilleur, c'est demain matin."*
 
 ---
-
-<!-- _class: break -->
-<!-- _paginate: false -->
-<!-- _footer: "" -->
-
-![bg right:35% 80%](../assets/gh-copilot-devdays-sweepstqke-qr.png)
+layout: image-right
+image: /assets/gh-copilot-devdays-sweepstqke-qr.png
+backgroundSize: contain
+class: section-break
+---
 
 # 🎁 Sweepstake GitHub Copilot Pro+
 
@@ -1059,14 +852,13 @@ Valeur     → Combien d'heures récupérées/semaine ?
 **Prix : abonnement GitHub Copilot Pro+ — 1 an** 🏆
 
 ---
+layout: image-right
+image: /assets/github-copilot-dev-days.png
+backgroundSize: contain
+class: end-slide
+---
 
-<!-- _class: end -->
-<!-- _paginate: false -->
-<!-- _footer: "" -->
-
-![bg right:35% fit](../assets/github-copilot-dev-days.png)
-
-# 🍁 Merci Montréal !
+# <span class="maple-leaf">🍁</span> Merci Montréal !
 
 ## `github.com/github/GitHub-Copilot-Dev-Days`
 
@@ -1075,12 +867,3 @@ dans le cadre de la série mondiale **GitHub Copilot Dev Days 2026**
 
 📸 Photo de groupe → `#GitHubCopilotDevDays`
 🔗 `meetup.com/gum365`
-
----
-
-**Prochains événements communautaires msdevmtl :**
-
-📅 **Mardi 31 mars** · 17h30–19h30 EDT
-📅 **Jeudi 9 avril** · 16h30–20h00 EDT
-
-🔗 `meetup.com/msdevmtl`

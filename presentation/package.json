@@ -1,0 +1,13 @@
+{
+  "name": "github-copilot-devdays-slidev",
+  "private": true,
+  "scripts": {
+    "dev": "slidev --no-open",
+    "build": "slidev build",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@slidev/cli": "^0.49.0",
+    "@slidev/theme-default": "latest"
+  }
+}

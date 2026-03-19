@@ -1,0 +1,334 @@
+/* =========================================================
+   GitHub Copilot Dev Days — Slidev Custom Theme
+   Dark GitHub branding
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* ---- Maple leaf emoji — push orange toward Canadian red ---- */
+.maple-leaf {
+  display: inline-block;
+  filter: hue-rotate(-20deg) saturate(1.4);
+}
+
+/* ---- Variables ---- */
+:root {
+  --gh-bg:      #0d1117;
+  --gh-bg2:     #161b22;
+  --gh-border:  #30363d;
+  --gh-blue:    #2f81f7;
+  --gh-blue-lt: #58a6ff;
+  --gh-blue-xt: #79c0ff;
+  --gh-green:   #3fb950;
+  --gh-orange:  #f0883e;
+  --gh-red:     #f85149;
+  --gh-yellow:  #d29922;
+  --gh-text:    #e6edf3;
+  --gh-muted:   #8b949e;
+  --gh-subtle:  #c9d1d9;
+}
+
+/* ---- Base layout ---- */
+.slidev-layout {
+  background-color: var(--gh-bg) !important;
+  color: var(--gh-text) !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 17px;
+  line-height: 1.55;
+  padding: 36px 56px;
+}
+
+/* ---- Headings ---- */
+.slidev-layout h1 {
+  color: var(--gh-blue-xt);
+  font-size: 1.75em;
+  font-weight: 700;
+  border-bottom: 2px solid var(--gh-blue);
+  padding-bottom: 0.15em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+}
+
+.slidev-layout h2 {
+  color: var(--gh-blue-lt);
+  font-size: 1.2em;
+  font-weight: 600;
+  margin: 0.2em 0 0.3em;
+}
+
+.slidev-layout h3 {
+  color: var(--gh-blue);
+  font-size: 1em;
+  font-weight: 600;
+}
+
+/* ---- Body text ---- */
+.slidev-layout p,
+.slidev-layout li {
+  color: var(--gh-subtle);
+  font-size: 0.92em;
+}
+
+.slidev-layout strong { color: var(--gh-green); font-weight: 600; }
+.slidev-layout em     { color: var(--gh-orange); font-style: normal; font-weight: 500; }
+
+/* ---- Lists ---- */
+.slidev-layout ul,
+.slidev-layout ol { padding-left: 1.4em; }
+.slidev-layout li { margin: 0.3em 0; }
+.slidev-layout ul > li::marker { color: var(--gh-blue); }
+
+/* ---- Code ---- */
+.slidev-layout code {
+  background-color: var(--gh-bg2);
+  color: var(--gh-text);
+  border: 1px solid var(--gh-border);
+  border-radius: 4px;
+  padding: 0.08em 0.42em;
+  font-family: 'Cascadia Code', 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.8em;
+}
+
+.slidev-layout pre {
+  background-color: var(--gh-bg2) !important;
+  border: 1px solid var(--gh-border);
+  border-radius: 8px;
+  padding: 0.85em 1.1em;
+  margin: 0.7em 0;
+}
+
+.slidev-layout pre code {
+  border: none;
+  background: none;
+  padding: 0;
+  font-size: 0.78em;
+  line-height: 1.5;
+}
+
+/* ---- Blockquotes ---- */
+.slidev-layout blockquote {
+  border-left: 4px solid var(--gh-blue);
+  background-color: var(--gh-bg2);
+  padding: 0.4em 0.9em;
+  border-radius: 0 6px 6px 0;
+  margin: 0.8em 0;
+  font-style: italic;
+}
+
+.slidev-layout blockquote p { color: var(--gh-muted); margin: 0; }
+.slidev-layout blockquote strong { color: var(--gh-blue-lt); }
+
+/* ---- Tables ---- */
+.slidev-layout table { width: 100%; border-collapse: collapse; font-size: 0.85em; margin: 0.7em 0; }
+.slidev-layout th {
+  background-color: var(--gh-bg2);
+  color: var(--gh-blue-xt);
+  padding: 0.45em 0.9em;
+  text-align: left;
+  border-bottom: 2px solid var(--gh-blue);
+  font-weight: 600;
+}
+.slidev-layout td {
+  padding: 0.4em 0.9em;
+  border-bottom: 1px solid #21262d;
+  color: var(--gh-subtle);
+  vertical-align: top;
+}
+
+/* ---- Links ---- */
+.slidev-layout a { color: var(--gh-blue-lt); text-decoration: none; }
+
+/* ---- Pagination / footer ---- */
+.slidev-page-num { color: var(--gh-muted); font-size: 0.55em; }
+
+/* =========================================================
+   COVER slide
+   ========================================================= */
+.slidev-layout.cover-slide,
+.slidev-layout.image-right.cover-slide {
+  background: linear-gradient(140deg, #0d1117 0%, #0a1628 100%) !important;
+  padding: 64px 80px;
+}
+
+.slidev-layout.cover-slide h1,
+.slidev-layout.image-right.cover-slide h1 {
+  font-size: 2.5em;
+  border: none;
+  color: #fff;
+  margin-bottom: 0.05em;
+  line-height: 1.1;
+}
+
+.slidev-layout.cover-slide h2,
+.slidev-layout.image-right.cover-slide h2 {
+  color: var(--gh-blue-lt);
+  font-size: 1.3em;
+  font-weight: 400;
+  margin-top: 0.1em;
+}
+
+.slidev-layout.cover-slide p,
+.slidev-layout.image-right.cover-slide p {
+  color: var(--gh-muted);
+  margin-top: 2em;
+  font-size: 0.82em;
+}
+
+/* =========================================================
+   SECTION BREAK slides
+   ========================================================= */
+.slidev-layout.section-break {
+  background: linear-gradient(135deg, #0d1117 0%, #161b22 100%) !important;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 64px;
+}
+
+.slidev-layout.section-break h1 {
+  font-size: 2.8em;
+  border: none;
+  color: #fff;
+  margin-bottom: 0.08em;
+  line-height: 1.1;
+}
+
+.slidev-layout.section-break h2 {
+  color: var(--gh-blue-lt);
+  font-size: 1.4em;
+  font-weight: 400;
+  margin-top: 0;
+}
+
+.slidev-layout.section-break p {
+  color: var(--gh-muted);
+  font-size: 0.9em;
+  margin-top: 0.4em;
+}
+
+/* =========================================================
+   END slide
+   ========================================================= */
+.slidev-layout.end-slide,
+.slidev-layout.image-right.end-slide {
+  background: linear-gradient(140deg, #0d1117 0%, #0a1628 100%) !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.slidev-layout.end-slide h1,
+.slidev-layout.image-right.end-slide h1 {
+  font-size: 2.6em;
+  border: none;
+  color: #fff;
+}
+
+.slidev-layout.end-slide h2,
+.slidev-layout.image-right.end-slide h2 {
+  color: var(--gh-blue-lt);
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+.slidev-layout.end-slide p,
+.slidev-layout.image-right.end-slide p {
+  color: var(--gh-muted);
+  font-size: 0.85em;
+}
+
+.slidev-layout.end-slide a,
+.slidev-layout.image-right.end-slide a {
+  color: var(--gh-blue-xt);
+}
+
+/* =========================================================
+   Card grid
+   ========================================================= */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 1em 0;
+}
+
+.cards.cols-2 { grid-template-columns: repeat(2, 1fr); }
+
+.card {
+  background: var(--gh-bg2);
+  border: 1px solid var(--gh-border);
+  border-radius: 8px;
+  padding: 0.85em;
+  font-size: 0.82em;
+  text-align: center;
+  color: var(--gh-subtle);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card.blue   { border-color: var(--gh-blue);   box-shadow: 0 0 8px rgba(47, 129, 247, 0.3); }
+.card.green  { border-color: var(--gh-green);  box-shadow: 0 0 8px rgba(63, 185, 80, 0.3); }
+.card.orange { border-color: var(--gh-orange); box-shadow: 0 0 8px rgba(240, 136, 62, 0.3); }
+.card.red    { border-color: var(--gh-red);    box-shadow: 0 0 8px rgba(248, 81, 73, 0.3); }
+.card.yellow { border-color: var(--gh-yellow); box-shadow: 0 0 8px rgba(210, 153, 34, 0.3); }
+
+.card strong { color: var(--gh-text); display: block; margin-bottom: 0.2em; }
+.card small  { color: var(--gh-muted); display: block; font-size: 0.85em; }
+
+/* =========================================================
+   Pill badges
+   ========================================================= */
+.badge {
+  display: inline-block;
+  background: var(--gh-bg2);
+  border: 1px solid var(--gh-blue);
+  border-radius: 20px;
+  padding: 0.15em 0.7em;
+  font-size: 0.75em;
+  color: var(--gh-blue-lt);
+  margin: 0 0.2em;
+}
+
+/* =========================================================
+   Bingo grid
+   ========================================================= */
+.bingo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  max-width: 660px;
+  margin: 0.8em auto;
+  font-size: 0.78em;
+}
+
+.bingo .cell {
+  background: var(--gh-bg2);
+  border: 1px solid var(--gh-border);
+  border-radius: 8px;
+  padding: 0.7em 0.5em;
+  text-align: center;
+  min-height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--gh-subtle);
+  line-height: 1.3;
+}
+
+.bingo .cell.hl  { border-color: var(--gh-blue); }
+
+.bingo .cell.center {
+  border: 2px solid var(--gh-green);
+  color: var(--gh-green);
+  font-weight: 700;
+  font-size: 1.1em;
+}
+
+/* =========================================================
+   Image-right layout: sizing handled by custom layout override
+   (layouts/image-right.vue) — default imageWidth=40%, backgroundSize=contain
+   matches Marp's ![bg right:40% fit]
+   ========================================================= */

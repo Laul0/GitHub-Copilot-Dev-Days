@@ -420,3 +420,4 @@ FodyWeavers.xsd
 # Presentation
 presentation/*.html
 presentation/*.pdf
+presentation/dist/
