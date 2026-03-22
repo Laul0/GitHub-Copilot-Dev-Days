@@ -73,7 +73,7 @@ clicks: 8
   <div :class="['cell', $clicks >= 2 && $clicks < 3 ? 'hl' : '']">😅 10+ onglets<br/>ouverts maintenant</div>
   <div :class="['cell', $clicks >= 3 && $clicks < 4 ? 'hl' : '']">😰 Peur que l'IA<br/>me remplace</div>
   <div :class="['cell', $clicks >= 4 && $clicks < 5 ? 'hl' : '']">🤖 Utilisé Copilot<br/>en production</div>
-  <div class="cell center"><span class="maple-leaf">🍁</span><br/>MONTRÉAL<br/>LIBRE</div>
+  <div class="cell center"><span class="maple-leaf" style="font-size: 40px;">🍁</span><br/>MONTRÉAL<br/>LIBRE</div>
   <div :class="['cell', $clicks >= 5 && $clicks < 6 ? 'hl' : '']">📦 Un side project<br/>jamais terminé</div>
   <div :class="['cell', $clicks >= 6 && $clicks < 7 ? 'hl' : '']">🌙 Codé à<br/>2h du matin</div>
   <div :class="['cell', $clicks >= 7 && $clicks < 8 ? 'hl' : '']">🐛 Débogué 2h+<br/>un truc trivial</div>
@@ -838,21 +838,6 @@ class: section-break
 
 ---
 layout: image-right
-image: /assets/gh-copilot-devdays-sweepstqke-qr.png
-backgroundSize: contain
-class: section-break
----
-
-# 🎁 Sweepstake GitHub Copilot Pro+
-
-## `aka.ms/githubcopilotdevdays/sweepstakes`
-
-*Tous les participants ayant complété le sondage sont éligibles.*
-
-**Prix : abonnement GitHub Copilot Pro+ — 1 an** 🏆
-
----
-layout: image-right
 image: /assets/github-copilot-dev-days.png
 backgroundSize: contain
 class: end-slide
@@ -867,3 +852,14 @@ dans le cadre de la série mondiale **GitHub Copilot Dev Days 2026**
 
 📸 Photo de groupe → `#GitHubCopilotDevDays`
 🔗 `meetup.com/gum365`
+
+---
+class: cover-slide
+---
+
+**Prochains événements communautaires msdevmtl :**
+
+📅 **Mardi 31 mars** · 17h30–19h30 EDT<br />
+📅 **Jeudi 9 avril** · 16h30–20h00 EDT
+
+🔗 `meetup.com/msdevmtl`

@@ -3,7 +3,7 @@ import { computed } from 'vue'
 import { useSlideContext } from '@slidev/client'
 
 const { $page, $nav, $slidev, $frontmatter } = useSlideContext()
-const total = computed(() => $nav.value.total.value)
+const total = computed(() => $nav.value.total)
 const hide = computed(() => {
   const cls = String($frontmatter.class ?? '')
   return cls.includes('section-break') || cls.includes('cover-slide') || cls.includes('end-slide')

@@ -5,10 +5,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-/* ---- Maple leaf emoji — push orange toward Canadian red ---- */
+/* ---- Maple leaf emoji — shift to Canadian red ---- */
 .maple-leaf {
   display: inline-block;
-  filter: hue-rotate(-20deg) saturate(1.4);
+  color: transparent;  
+  text-shadow: 0 0 0 red;
 }
 
 /* ---- Variables ---- */
@@ -148,6 +149,9 @@
 .slidev-layout.image-right.cover-slide {
   background: linear-gradient(140deg, #0d1117 0%, #0a1628 100%) !important;
   padding: 64px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .slidev-layout.cover-slide h1,
