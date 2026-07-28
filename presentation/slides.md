@@ -9,7 +9,7 @@ colorSchema: dark
 transition: none
 paginate: true
 layout: image-right
-image: /assets/github-copilot-dev-days.png
+image: assets/github-copilot-dev-days.png
 backgroundSize: contain
 class: cover-slide
 fonts:
@@ -178,7 +178,7 @@ class: section-break
 
 ---
 layout: image-right
-image: /assets/github-copilot-dev-days.png
+image: assets/github-copilot-dev-days.png
 backgroundSize: contain
 class: cover-slide
 ---
@@ -838,7 +838,7 @@ class: section-break
 
 ---
 layout: image-right
-image: /assets/github-copilot-dev-days.png
+image: assets/github-copilot-dev-days.png
 backgroundSize: contain
 class: end-slide
 ---

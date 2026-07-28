@@ -20,6 +20,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      BASE_PATH: /${{ github.event.repository.name }}/
     defaults:
       run:
         working-directory: presentation
@@ -39,7 +41,7 @@ jobs:
         run: npm ci
 
       - name: Build Slidev
-        run: npm run build
+        run: npm run build -- --base "$BASE_PATH"
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
